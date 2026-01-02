@@ -2,11 +2,27 @@
 #include<string.h>
 int main()
 {
-    int b;
+    int b,c,d,i,j;
+    int e=0;
     char a[101];
     scanf("%s",&a);
     b=strlen(a);
-    if(b%2==0)
+    for(i=0;i<b;i++)
+    {
+        d=0;
+        for(j=i+1;j<b;j++)
+        {
+            if(a[i]==a[j])
+            {
+                d++;
+            }
+        }
+        if(d==0)
+        {
+            e++;
+        }
+    }
+    if(e%2==0)
     {
         printf("CHAT WITH HER!");
     }
