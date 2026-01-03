@@ -2,45 +2,43 @@
 #include<string.h>
 int main()
 {
-    int c,d,e=0,f=0,i;
+    int c,i;
     char a[101],b[101];
     scanf("%s",&a);
     scanf("%s",&b);
     c=strlen(a);
-    d=strlen(b);
     for(i=0;i<c;i++)
     {
         if(a[i]<'a')
         {
-            e=e+a[i]+32;
+            a[i]=a[i]+32;
         }
         else
         {
-            e=e+a[i];
+            a[i]=a[i];
         }
-    }
-    for(i=0;i<d;i++)
-    {
         if(b[i]<'a')
         {
-            f=f+b[i]+32;
+            b[i]=b[i]+32;
         }
         else
         {
-            f=f+b[i];
+            b[i]=b[i];
         }
     }
-    if(e>f)
+    for(i=0;i<c;i++)
     {
-        printf("1");
+        if(a[i]>b[i])
+        {
+            printf("1");
+            return 0;
+        }
+        else if(a[i]<b[i])
+        {
+            printf("-1");
+            return 0;
+        }
     }
-    else if(e<f)
-    {
-        printf("-1");
-    }
-    else
-    {
-        printf("0");
-    }
+    printf("0");
     return 0;
 }
