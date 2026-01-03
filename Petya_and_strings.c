@@ -21,13 +21,13 @@ int main()
     }
     for(i=0;i<d;i++)
     {
-        if(a[i]<'a')
+        if(b[i]<'a')
         {
-            f=f+a[i]+32;
+            f=f+b[i]+32;
         }
         else
         {
-            f=f+a[i];
+            f=f+b[i];
         }
     }
     if(e>f)
