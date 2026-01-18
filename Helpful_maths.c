@@ -3,27 +3,35 @@
 int main()
 {
     char a[101],b[101];
-    int c,d,i,j;
+    int c,i,j,p,q,r;
+    p=0;
+    q=0;
+    r=0;
     scanf("%s",&a);
+    printf("%s",a);
     c=strlen(a);
     for(i=1;i<c;i+2)
     {
-        b[i]=a[i];
+        b[i]='+';
     }
-    for(i=0;i<c;i+2)
+    for(i=1;i<=c;i+2)
     {
-        d=0;
-        for(j=0;j<c;j+2)
+        if(a[i]==1)
         {
-            if(a[i]>b[j])
-            {
-                d++;
-            }
+            p=p+2;
         }
-        if(d=0)
+        else if(a[i]==2)
         {
-            b[i]=a[i];
+            q=q+2;
         }
+        else
+        {
+            r=r+2;
+        }
+    }
+    for(i=0;i<p;i+2)
+    {
+        b[i]=1;
     }
     printf("%s",b);
     return 0;
