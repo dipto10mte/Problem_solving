@@ -3,36 +3,37 @@
 int main()
 {
     char a[101],b[101];
-    int c,i,j,p,q,r;
-    p=0;
-    q=0;
-    r=0;
-    scanf("%s",&a);
-    printf("%s",a);
+    int c,i,j=0,k;
+    char x;
+    scanf("%s",a);
     c=strlen(a);
-    for(i=1;i<c;i+2)
+    for(i=0;i<c;i+=2)
     {
-        b[i]='+';
+            b[j]=a[i];
+            j++;
     }
-    for(i=1;i<=c;i+2)
+    for(i=0;i<j;i++)
     {
-        if(a[i]==1)
+        for(k=0;k<j-i-1;k++)
         {
-            p=p+2;
+            if(b[k]>b[k+1])
+            {
+                x=b[k];
+                b[k]=b[k+1];
+                b[k+1]=x;
+            }
         }
-        else if(a[i]==2)
+    }
+    for(i=0;i<j;i++)
+    {
+        if(i==j-1)
         {
-            q=q+2;
+            printf("%c",b[i]);
         }
         else
         {
-            r=r+2;
+            printf("%c%c",b[i],'+');
         }
     }
-    for(i=0;i<p;i+2)
-    {
-        b[i]=1;
-    }
-    printf("%s",b);
     return 0;
 }
