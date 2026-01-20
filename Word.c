@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[101],b[101];
+    int c,i,x=0,y=0;
+    scanf("%s",a);
+    for(i=0;i<strlen(a);i++)
+    {
+       if(a[i]<91)
+       {
+           x++;
+       }
+       else
+       {
+           y++;
+       }
+    }
+    if(x>y)
+    {
+        for(i=0;i<strlen(a);i++)
+        {
+            if(a[i]>91)
+            {
+                b[i]=a[i]-32;
+            }
+            else
+            {
+                b[i]=a[i];
+            }
+        }
+        b[i+1]=/0;
+    }
+    else
+    {
+        for(i=0;i<strlen(a);i++)
+        {
+            if(a[i]<91)
+            {
+                b[i]=a[i]+32;
+            }
+            else
+            {
+                b[i]=a[i];
+            }
+        }
+        b[i+1]=/0;
+    }
+    printf("%s",b);
+    return 0;
+}
