@@ -29,7 +29,7 @@ int main()
                 b[i]=a[i];
             }
         }
-        b[i+1]=/0;
+        b[i]='\0';
     }
     else
     {
@@ -44,7 +44,7 @@ int main()
                 b[i]=a[i];
             }
         }
-        b[i+1]=/0;
+        b[i]='\0';
     }
     printf("%s",b);
     return 0;
