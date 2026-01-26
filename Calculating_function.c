@@ -1,19 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int b=0,i,n;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
+    long long n;
+    scanf("%lld",&n);
+    if(n%2==0)
     {
-        if(i%2==0)
-        {
-            b=b+i;
-        }
-        else
-        {
-            b=b-i;
-        }
+        printf("%lld",n/2);
     }
-    printf("%d",b);
+    else
+    {
+        printf("-%lld",(n+1)/2);
+    }
     return 0;
 }
