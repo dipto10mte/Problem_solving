@@ -15,7 +15,7 @@ int main()
         if(i%2==0)
         {
             printf("%s ",b);
-            if(i>0)
+            if(i<n-1)
             {
                 printf("that ");
             }
@@ -23,7 +23,7 @@ int main()
         else
         {
             printf("%s ",a);
-            if(i>0)
+            if(i<n-1)
             {
                 printf("that ");
             }
