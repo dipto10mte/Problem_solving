@@ -16,16 +16,27 @@ int main()
         }
         else
         {
-            for(j=0;j<c-1;j++)
-            {
-                printf(".");
-
-            }
-            if(j==c-1)
+            if((i+1)%4==0)
             {
                 printf("#");
+                for(j=1;j<c;j++)
+                {
+                    printf(".");
+
+                }
+                printf("\n");
+
             }
-            printf("\n");
+            else
+            {
+                for(j=0;j<c-1;j++)
+                {
+                    printf(".");
+
+                }
+                printf("#");
+                printf("\n");
+            }
         }
     }
     return 0;
