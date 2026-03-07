@@ -22,10 +22,6 @@ int main()
             a[i]=1;
         else if(b='T','i','u','r','m')
             a[i]=1;
-        else if(b='T','i','m','u','r')
-            a[i]=1;
-        else
-            a[i]=0;
     }
     for(i=0;i<t;i++){
         if(a[i]==1)
