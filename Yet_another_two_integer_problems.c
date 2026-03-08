@@ -25,6 +25,7 @@ int main()
                 x[i]++;
         }
     }
-
+    for(i=0;i<t;i++)
+        printf("%d\n",x[i]);
     return 0;
 }
