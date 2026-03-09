@@ -18,7 +18,12 @@ int main()
             if(a%10!=b%10)
                 x[i]++;
         }
-
+        else
+        {
+            x[i]=(b-a)/10;
+            if(a%10!=b%10)
+                x[i]++;
+        }
     }
     for(i=0;i<t;i++)
         printf("%d\n",x[i]);
