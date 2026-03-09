@@ -12,6 +12,12 @@ int main()
         {
             x[i]=0;
         }
+        else if(a>b)
+        {
+            x[i]=(a-b)/10;
+            if(a%10!=b%10)
+                x[i]++;
+        }
 
     }
     for(i=0;i<t;i++)
