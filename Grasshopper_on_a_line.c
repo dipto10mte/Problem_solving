@@ -13,9 +13,10 @@ int main()
             printf("%d\n%d",1,n);
         else if(n==k)
             printf("%d\n%d %d",2,n-1,1);
+        else if(n%k!=0)
+            printf("%d\n%d",1,n);
         else{
-            if(n%k!=0)
-                printf("%d\n%d",1,n);
+            printf("%d\n%d %d",2,n-1,1);
         }
         printf("\n");
     }
