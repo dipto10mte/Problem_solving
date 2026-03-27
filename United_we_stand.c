@@ -1,15 +1,13 @@
 #include<stdio.h>
 int main()
 {
-    int b[50000],e,i,j,k,m,n,o=0,t,x,y;
+    int b[50000],e,i,j,k,m,n,o=0,t;
     scanf("%d",&t);
     int a[2*t];
     for(i=0;i<t;i+=2){
         scanf("%d",&n);
         int d[n];
         m=1;
-        x=0;
-        y=0;
         for(j=0;j<n;j++)
             scanf("%d",&d[j]);
         for(j=0;j<n;j++){
@@ -30,8 +28,13 @@ int main()
             i--;
         }
         else{
-            o+=n;
-
+            a[i]=0;
+            for(j=0;j<n;j++,o++){
+                b[o]=d[j];
+                if(d[0]==d[j])
+                a[i]++;
+            }
+            a[i+1]=n-a[i];
         }
     }
     return 0;
