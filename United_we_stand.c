@@ -4,7 +4,7 @@ int main()
     int b[50000],e,i,j,k,m,n,o=0,t;
     scanf("%d",&t);
     int a[2*t];
-    for(i=0;i<t;i+=2){
+    for(i=0;i<2*t;i+=2){
         scanf("%d",&n);
         int d[n];
         m=1;
@@ -25,7 +25,6 @@ int main()
         }
         if(m==n){
             a[i]=-1;
-            i--;
         }
         else{
             a[i]=0;
@@ -35,6 +34,21 @@ int main()
                 a[i]++;
             }
             a[i+1]=n-a[i];
+        }
+    }
+    o=0;
+    for(i=0;i<2*t;i+=2){
+        if(a[i]==-1){
+            printf("-1\n");
+        }
+        else{
+            printf("%d %d\n",a[i],a[i+1]);
+            for(j=0;j<a[i];j++,o++)
+                printf("%d ",b[o]);
+            printf("\n");
+            for(j=0;j<a[i+1];j++,o++)
+                printf("%d ",b[o]);
+            printf("\n");
         }
     }
     return 0;
