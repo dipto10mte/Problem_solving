@@ -21,11 +21,6 @@ int main()
             }
         }
     }
-    for(i=0;i<t;i++){
-        if(a[i]==1)
-            printf("YES\n");
-        else
-            printf("NO\n");
-    }
+
     return 0;
 }
