@@ -17,6 +17,11 @@ int main()
         else
             a[i]=0;
     }
-
+    for(i=0;i<t;i++){
+        if(a[i]==1)
+            printf("YES\n");
+        else
+            printf("NO\n");
+    }
     return 0;
 }
