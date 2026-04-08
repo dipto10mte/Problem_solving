@@ -19,6 +19,7 @@ int main()
         }
         a[i]=m;
     }
-
+    for(i=0;i<t;i++)
+        printf("%d\n",a[i]);
     return 0;
 }
