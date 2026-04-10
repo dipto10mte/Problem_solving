@@ -21,6 +21,20 @@ int swap(int arr[],int n){
 
 int main()
 {
+    int i,j,n,t;
+    scanf("%d",&t);
+    int a[t];
+    for(i=0;i<t;i++){
+        scanf("%d",&n);
+        int b[n];
+        for(j=0;j<n;j++)
+            scanf("%d",&b[j]);
+        a[i]=check(b,n);
+        if(a[i]==1){
+            swap(b,n);
+            a[i]=check(b,n);
+        }
+    }
 
     return 0;
 }
