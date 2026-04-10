@@ -35,6 +35,11 @@ int main()
             a[i]=check(b,n);
         }
     }
-
+    for(i=0;i<t;i++){
+        if(a[i]==1)
+            printf("YES");
+        else
+            printf("NO");
+    }
     return 0;
 }
