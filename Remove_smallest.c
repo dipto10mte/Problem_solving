@@ -3,49 +3,42 @@ int main()
 {
     int i,j=0,k,l,t,n;
     scanf("%d",&t);
-    int a[t],b[t];
-    for(j=0;j<t;j++)
+    int a[t];
+    for(i=0;i<t;i++)
     {
-        b[j]=1;
+        a[i]=1;
         scanf("%d",&n);
-        for(i=0;i<n;i++)
-        {
-            scanf("%d",&a[i]);
-        }
+        int b[n];
+        for(j=0;j<n;j++)
+            scanf("%d",&b[j]);
         if(n==1)
-        {
-            b[j]=1;
-        }
+            continue;
         else
         {
-            for(i=0;i<n;i++)
+            for(j=0;j<n;j++)
             {
-                for(k=i;k<n;k++)
+                for(k=j+1;k<n;k++)
                 {
-                    if(a[i]>a[j])
+                    if(b[j]>b[k])
                     {
-                        l=a[i];
-                        a[i]=a[j];
-                        a[j]=l;
+                        l=b[j];
+                        b[j]=b[k];
+                        b[k]=l;
                     }
                 }
             }
-            if(a[n-1]-a[0]>1)
-            {
-                b[j]=0;
+            for(j=1;j<n;j++){
+                if(b[j]-b[j-1]>1)
+                    a[i]=0;
             }
         }
     }
     for(i=0;i<t;i++)
     {
-        if(b[i]==1)
-        {
+        if(a[i]==1)
             printf("YES\n");
-        }
         else
-        {
             printf("NO\n");
-        }
     }
     return 0;
 }
