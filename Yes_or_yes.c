@@ -1,31 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int i,j,n;
-    char si[3];
+    int i,n;
+    char s[4];
     scanf("%d",&n);
+    int a[n];
     for(i=0;i<n;i++)
     {
-        char si[3];
-        scanf("%s",si);
-        for(j=0;j<3;j++)
-        {
-            if(si[j]>96)
-            {
-                si[j]=si[j]-32;
-            }
-        }
+        scanf("%s",s);
+        if((s[0]=='Y'||s[0]=='y')&&(s[1]=='E'||s[1]=='e')&&(s[2]=='S'||s[2]=='s'))
+            a[i]=1;
+        else
+            a[i]=0;
     }
     for(i=0;i<n;i++)
     {
-        if(si[0]=='Y'&&si[1]=='E'&&si[2]++'S')
-        {
+        if(a[i]==1)
             printf("YES");
-        }
         else
-        {
             printf("NO");
-        }
         printf("\n");
     }
     return 0;
