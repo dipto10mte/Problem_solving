@@ -1,30 +1,35 @@
 #include<stdio.h>
 int main()
 {
-    int a[100],b[101]={0},c,i,j,k,n,t;
+    int i,j,k,n,t;
     scanf("%d",&t);
+    int a[t];
     for(i=0;i<t;i++)
     {
-        scanf("%d %d",&k,&n);
-        for(j=0;j<t;j++)
-            scanf("%d",&a[i]);
-        if(n>=2)
-            b[i]=1;
-        else
-        {
-            c=0;
-            for(j=1;j<n;j++)
-            {
-                if(a[j-1]<=a[j])
-                    c++;
+        scanf("%d %d",&n,&k);
+        int b[n],c=0;
+        for(j=0;j<n;j++)
+            scanf("%d",&b[j]);
+        if(k>1||n==1)
+            a[i]=1;
+        else if(k==1){
+            for(j=1;j<n;j++){
+                if(b[j-1]>b[j]){
+                    c=1;
+                    break;
+                }
             }
-            if(c==k)
-                b[i]=1;
+            if(c==1)
+                a[i]=0;
+            else
+                a[i]=1;
         }
+        else
+            a[i]=0;
     }
     for(i=0;i<t;i++)
     {
-        if(b[i]==1)
+        if(a[i]==1)
             printf("YES\n");
         else
             printf("NO\n");
