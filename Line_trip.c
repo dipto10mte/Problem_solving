@@ -3,29 +3,28 @@ int main()
 {
     int i,j,m,n,t,x;
     scanf("%d",&t);
-    int p[t];
+    int a[t];
     for(i=0;i<t;i++)
     {
-        m=0;
         scanf("%d %d",&n,&x);
-        int q[n];
+        int b[n];
         for(j=0;j<n;j++)
-            scanf("%d",&q[j]);
-        if(n==1)
-            m=q[0];
+            scanf("%d",&b[j]);
+        m=b[0];
+        if(b==1){}
         else
         {
             for(j=1;j<n;j++){
-                if(q[j]-q[j-1]>m)
-                    m=q[j]-q[j-1];
+                if(b[j]-b[j-1]>m)
+                    m=b[j]-b[j-1];
             }
         }
-        if((x-q[j-1])*2>m)
-            p[i]=(x-q[j-1])*2;
+        if((x-b[j-1])*2>m)
+            a[i]=(x-b[j-1])*2;
         else
-            p[i]=m;
+            a[i]=m;
     }
     for(i=0;i<t;i++)
-        printf("%d\n",p[i]);
+        printf("%d\n",a[i]);
     return 0;
 }
