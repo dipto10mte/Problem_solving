@@ -1,15 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int a[100],b[1000]={0},i,j,k,n,t;
+    int a,i,j,k,n,t;
     scanf("%d",&t);
+    int b[t];
     for(i=0;i<t;i++)
     {
         scanf("%d %d",&n,&k);
+        b[i]=0;
         for(j=0;j<n;j++)
         {
-            scanf("%d",&a[i]);
-            if(a[i]==k)
+            scanf("%d",&a);
+            if(a==k)
                 b[i]=1;
         }
     }
