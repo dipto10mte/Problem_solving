@@ -7,13 +7,7 @@ int main()
     int a[t];
     for(i=0;i<t;i++){
         scanf("%s",b);
-        if(b[0]=='a'&&b[1]=='b')
-            a[i]=1;
-        else if(b[0]=='b'&&b[1]=='a')
-            a[i]=1;
-        else if(b[0]=='c'&&b[2]=='a')
-            a[i]=1;
-        else if(b[1]=='c'&&b[2]=='b')
+        if(b[0]=='a'||b[1]=='b'||b[2]=='c')
             a[i]=1;
         else
             a[i]=0;
