@@ -3,20 +3,20 @@ int main()
 {
     int i,j,n,w,x=0,y=0,z=0;
     scanf("%d",&n);
-    int a[n],b[n];
+    int a[n],b[n],c[n],d[n];
     for(i=0;i<n;i++){
         scanf("%d",&a[i]);
         if(a[i]==1){
+            b[x]=i+1;
             x++;
-            b[x*3-3]=i+1;
         }
         else if(a[i]==2){
+            c[y]=i+1;
             y++;
-            b[y*3-2]=i+1;
         }
         else{
+            d[z]=i+1;
             z++;
-            b[z*3-1]=i+1;
         }
     }
     if(x<y&&x<z)
@@ -26,8 +26,8 @@ int main()
     else
         w=z;
     printf("%d\n",w);
-    for(i=0,j=0;i<w;i++,j+=3){
-        printf("%d %d %d\n",b[j],b[j+1],b[j+2]);
+    for(i=0;i<w;i++){
+        printf("%d %d %d\n",b[i],c[i],d[i]);
     }
     return 0;
 }
