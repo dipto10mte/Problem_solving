@@ -1,22 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int i,j,m,n,t;
+    int i,j,l,m,n,t;
     scanf("%d",&t);
     int b[t];
     for(i=0;i<t;i++){
         scanf("%d",&n);
         int a[n];
+        l=0;
         m=0;
         for(j=0;j<n;j++){
             scanf("%d",&a[j]);
             if(j%2==0&&a[j]%2!=0)
-                m++;
+                l++;
             else if(j%2!=0&&a[j]%2==0)
                 m++;
         }
-        b[i]=m/2;
-        if(m%2==1)
+        if(l==m)
+            b[i]=l;
+        else
             b[i]=-1;
     }
     for(i=0;i<t;i++)
