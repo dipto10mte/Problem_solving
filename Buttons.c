@@ -6,14 +6,14 @@ int main()
     int x[t];
     for(i=0;i<t;i++){
         scanf("%d %d %d",&a,&b,&c);
-        if(a>b+c)
-            x[i]=1;
-        else if(b>a+c)
+        a=a+c/2;
+        b=b+c/2;
+        if(c%2==1)
+            a++;
+        if(b>=a)
             x[i]=0;
-        else if((a+b+c)%2==1)
-            x[i]=1;
         else
-            x[i]=0;
+            x[i]=1;
     }
     for(i=0;i<t;i++){
         if(x[i]==1)
