@@ -1,26 +1,44 @@
 #include<stdio.h>
+#include<stdlib.h>
+
+int cmp(const void *a,const void *b)
+{
+    return (*(int*)a-*(int*)b);
+}
+
 int main()
 {
-    int i,j,n,t;
+    int t;
     scanf("%d",&t);
-    int a[t];
-    for(i=0;i<t;i++){
+
+    while(t--)
+    {
+        int n;
         scanf("%d",&n);
-        int b[10]={0};
-        int c,d=10;
-        a[i]=-1;
-        for(j=0;j<n;j++){
-            scanf("%d",&c);
-            b[c]++;
+
+        int a[n];
+
+        for(int i=0;i<n;i++)
+            scanf("%d",&a[i]);
+
+        qsort(a,n,sizeof(int),cmp);
+
+        int ans=-1;
+        int count=1;
+
+        for(int i=1;i<n;i++)
+        {
+            if(a[i]==a[i-1])
+                count++;
+            else
+                count=1;
+
+            if(count>=3)
+                ans=a[i];
         }
-        while(d--){
-            if(b[d]>2){
-                a[i]=d;
-                break;
-            }
-        }
+
+        printf("%d\n",ans);
     }
-    for(i=0;i<t;i++)
-        printf("%d\n",a[i]);
+
     return 0;
 }
