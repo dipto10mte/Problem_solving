@@ -4,7 +4,7 @@ int main()
     int i,t;
     char b[11],c[11],d[11];
     scanf("%d",&t);
-    char a[3*10];
+    char a[3*t+1];
     for(i=0;i<3*t;i+=3){
         scanf("%s %s %s",b,c,d);
         a[i]=b[0];
