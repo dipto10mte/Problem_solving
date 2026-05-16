@@ -6,11 +6,11 @@ int main()
     int a[t];
     for(i=0;i<t;i++){
         scanf("%d",&n);
-        char b[n];
+        char b[n+1];
         scanf("%s",b);
         x=0;
         y=0;
-
+        a[i]=0;
         for(j=0;j<n;j++){
             if(b[j]=='R')
                 x++;
