@@ -1,19 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,i,m,n,t;
+    int a,b,c,i,n,t;
     scanf("%d",&t);
     int x[t];
     for(i=0;i<t;i++){
         scanf("%d %d %d %d",&a,&b,&c,&n);
-        a=a+b+c+n;
-        b=0;
-        while(a>0){
-            c=a%10;
-            b+=c;
-            a=a/10;
-        }
-        if(b%3==0)
+        if(2*a>b+c+n||2*b>a+c+n||2*c>a+b+n)
+            x[i]=0;
+        else if((a+b+c+n)%3==0)
             x[i]=1;
         else
             x[i]=0;
