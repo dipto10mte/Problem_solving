@@ -2,7 +2,8 @@
 #include<math.h>
 int main()
 {
-    int b,i,j,m,n,o,t;
+    int b,i,j,n,t;
+    long long m,o;
     scanf("%d",&t);
     int a[t];
     for(i=0;i<t;i++){
