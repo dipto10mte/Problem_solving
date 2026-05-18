@@ -17,7 +17,15 @@ int main()
                 break;
             }
         }
-
+        if(c){
+            d=a[1]-a[0];
+            for(j=0;j<n-1;j++){
+                if(d>(a[j+1]-a[j]))
+                    d=a[j+1]-a[j];
+            }
+            b[i]=d/2+1;
+        }
+    }
     for(i=0;i<t;i++)
         printf("%d\n",b[i]);
     return 0;
