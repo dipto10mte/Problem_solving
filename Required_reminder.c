@@ -1,18 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,t,x,y;
+    long long m,n,x,y;
+    int i,t;
     scanf("%d",&t);
     int a[t];
     for(i=0;i<t;i++){
-        scanf("%d %d %d",&x,&y,&n);
-        while(1){
-            if(n%x==y){
-                a[i]=n;
-                break;
-            }
-            n--;
-        }
+        scanf("%lld %lld %lld",&x,&y,&n);
+        m=n/x;
+        a[i]=m*x+y;
+        if(a[i]>n)
+            a[i]-=x;
     }
     for(i=0;i<t;i++)
         printf("%d\n",a[i]);
