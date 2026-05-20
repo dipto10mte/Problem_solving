@@ -14,6 +14,8 @@ int main()
         }
         if(m%2==1)
             a[i]=1;
+        else if(m>0&&n>m)
+            a[i]=1;
         else
             a[i]=0;
     }
