@@ -27,6 +27,25 @@ int main()
             a[i+2]=0;
         }
     }
-
+    for(i=0;i<3*t;i+=3){
+        if(a[i+2]==0)
+            printf("No\n");
+        else{
+            printf("Yes\n");
+            if(a[i]==0){
+                printf("%d\n",a[i+1]);
+                while(a[i+1]--)
+                    printf("%d ",a[i+2]);
+                printf("\n");
+            }
+            else{
+                printf("%d\n",a[i+2]+1);
+                printf("%d ",a[i]);
+                while(a[i+1]--)
+                    printf("%d ",a[i+2]);
+                printf("\n");
+            }
+        }
+    }
     return 0;
 }
