@@ -39,7 +39,7 @@ int main()
                 printf("\n");
             }
             else{
-                printf("%d\n",a[i+2]+1);
+                printf("%d\n",a[i+1]+1);
                 printf("%d ",a[i]);
                 while(a[i+1]--)
                     printf("%d ",a[i+2]);
