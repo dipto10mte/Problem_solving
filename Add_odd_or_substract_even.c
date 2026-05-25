@@ -8,7 +8,7 @@ int main()
         scanf("%d %d",&a,&b);
         if(a==b)
             c[i]=0;
-        else if((a%2==1&&b%2==1)||(a%2==0&&b%2==0)){
+        else if(a%2==b%2){
             if(b>a)
                 c[i]=2;
             else
