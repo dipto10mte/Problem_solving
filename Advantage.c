@@ -1,24 +1,25 @@
 #include<stdio.h>
-#include<stdlib.h>
 int main()
 {
-    int i,j,k=0,l,m,n,t;
+    int b[200000],i,j,k=0,l,m,n,t;
     scanf("%d",&t);
     int a[t];
-    int *b = malloc(sizeof(int) * t * 200000);
     for(i=0;i<t;i++){
         scanf("%d",&a[i]);
         m=0;
         l=0;
         n=k;
-        for(j=0;j<a[i];j++,k++){
+        for(j=0;j<a[i];j++,k++)
             scanf("%d",&b[k]);
-            if(b[k]>m){
+        for(j=n;j<k;j++){
+            if(b[j]>m){
                 l=m;
-                m=b[k];
+                m=b[j];
             }
-            else if(b[k]>l&&b[k]!=m)
-                l=b[k];
+            else if(b[j]==m)
+                l=m;
+            else if(b[j]>l)
+                l=b[j];
         }
         if(l==0)
             l=m;
@@ -35,6 +36,5 @@ int main()
             printf("%d ",b[k]);
         printf("\n");
     }
-    free(b);
     return 0;
 }
