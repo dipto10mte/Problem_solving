@@ -6,19 +6,13 @@ int main()
     int a[t];
     for(i=0;i<t;i++){
         scanf("%d %d %d",&n,&s,&x);
-        m=0;
+        a[i]=m=0;
         while(n--){
             scanf("%d",&b);
             m+=b;
         }
-        if(m<=s){
-            if((s-m)%x==0)
-                a[i]=1;
-            else
-                a[i]=0;
-        }
-        else
-            a[i]=0;
+        if((s-m)%x==0&&m<=s)
+            a[i]=1;
     }
     for(i=0;i<t;i++){
         if(a[i]==1)
