@@ -11,7 +11,12 @@ int main()
             scanf("%d",&b);
             m^=b;
         }
-
+        if(m==0)
+            a[i]=0;
+        else if(n%2==1)
+            a[i]=m;
+        else
+            a[i]=-1;
     }
     for(i=0;i<t;i++)
         printf("%d\n",a[i]);
