@@ -7,6 +7,10 @@ int main()
     for(i=0;i<t;i++){
         scanf("%d",&n);
         m=0;
+        for(j=0;j<n;j++){
+            scanf("%d",&b);
+            m^=b;
+        }
 
     }
     for(i=0;i<t;i++)
