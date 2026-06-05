@@ -11,6 +11,8 @@ int main()
         else
             c[i]=0;
     }
+    for(i=0;i<t;i++){
 
+    }
     return 0;
 }
