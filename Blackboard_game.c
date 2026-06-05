@@ -12,7 +12,10 @@ int main()
             c[i]=0;
     }
     for(i=0;i<t;i++){
-
+        if(c[i])
+            printf("Bob\n");
+        else
+            printf("Alice\n");
     }
     return 0;
 }
