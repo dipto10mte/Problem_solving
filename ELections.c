@@ -19,7 +19,20 @@ int main()
             a[i+1]++;
             a[i+2]++;
         }
-
+        else{
+            if(a[i]==0){
+                a[i+1]++;
+                a[i+2]++;
+            }
+            else if(a[i+1]==0){
+                a[i]++;
+                a[i+2]++;
+            }
+            else{
+                a[i]++;
+                a[i+1]++;
+            }
+        }
     }
     for(i=0;i<3*t;i+=3)
         printf("%d %d %d\n",a[i],a[i+1],a[i+2]);
