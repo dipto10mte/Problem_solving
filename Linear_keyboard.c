@@ -8,7 +8,12 @@ void solve() {
     for(int i=0;i<26;i++) {
         pos[keyboard[i] - 'a'] = i;
     }
-
+    long long total=0;
+    int n=strlen(word);
+    for (int i=0;i<n-1;i++){
+        total+=abs(pos[word[i]-'a']-pos[word[i+1]-'a']);
+    }
+    printf("%lld\n",total);
 }
 int main() {
     int t;
