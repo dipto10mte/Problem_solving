@@ -12,7 +12,17 @@ int main() {
             if (a[i] < a[min_idx]) min_idx = i;
             if (a[i] > a[max_idx]) max_idx = i;
         }
-
+        int L = min_idx, R = max_idx;
+        if (L > R) {
+            int tmp = L; L = R; R = tmp;
+        }
+        int both_left = R + 1;
+        int both_right = n - L;
+        int split = (L + 1) + (n - R);
+        int ans = both_left;
+        if (both_right < ans) ans = both_right;
+        if (split    < ans) ans = split;
+        printf("%d\n", ans);
     }
     return 0;
 }
