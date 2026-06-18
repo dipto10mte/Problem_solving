@@ -11,7 +11,12 @@ int main()
         long long total = full_cycles * cycle;
         long long days = full_cycles * 3;
         long long rem[3] = {a, b, c};
-
+        for (int i = 0; i < 3; i++) {
+            total += rem[i];
+            days++;
+            if (total >= n) break;
+        }
+        printf("%lld\n", days);
     }
     return 0;
 }
