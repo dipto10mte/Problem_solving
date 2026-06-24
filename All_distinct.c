@@ -11,7 +11,15 @@ void solve() {
     for (int i=0;i<n;i++)
         scanf("%d",&a[i]);
     qsort(a,n,sizeof(int),cmp);
-
+    int u=1;
+    for (int i=1;i<n;i++)
+        if(a[i]!=a[i-1])
+            u++;
+    int d=n-u;
+    if(d%2==0)
+        printf("%d\n",u);
+    else
+        printf("%d\n",u - 1);
 }
 int main() {
     int t;
