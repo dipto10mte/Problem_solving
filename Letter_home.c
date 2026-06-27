@@ -6,6 +6,14 @@ int abs_val(int x){
 int min_val(int a, int b){
     return a < b ? a : b;
 }
+int main(){
+    int t;
+    scanf("%d", &t);
+    while (t--){
+        int n,s;
+        scanf("%d %d",&n,&s);
+        int *x=malloc(n*sizeof(int));
 
+    }
     return 0;
 }
