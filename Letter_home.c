@@ -13,7 +13,14 @@ int main(){
         int n,s;
         scanf("%d %d",&n,&s);
         int *x=malloc(n*sizeof(int));
-
+        for(int i=0;i<n;i++)
+            scanf("%d", &x[i]);
+        int range=x[n-1]-x[0];
+        int to_left =abs_val(s - x[0]);
+        int to_right=abs_val(s - x[n-1]);
+        int ans=range+min_val(to_left,to_right);
+        printf("%d\n",ans);
+        free(x);
     }
     return 0;
 }
