@@ -5,7 +5,10 @@ int main(){
     while(t--){
         int n,m;
         scanf("%d %d",&n,&m);
-
+        if(n>=m&&(n-m)%2==0)
+            printf("Yes\n");
+        else
+            printf("No\n");
     }
     return 0;
 }
