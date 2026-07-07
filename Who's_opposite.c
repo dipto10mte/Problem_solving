@@ -3,6 +3,11 @@
 int main(){
     int t;
     scanf("%d",&t);
+    while(t--){
+        long long a,b,c;
+        scanf("%lld %lld %lld",&a,&b,&c);
+        long long n=2*llabs(a-b);
 
+    }
     return 0;
 }
