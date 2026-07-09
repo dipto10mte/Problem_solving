@@ -10,7 +10,13 @@ void solve(){
     for (int i=0;i<n;i++)
         scanf("%d",&a[i]);
     qsort(a,n,sizeof(int),compare);
-
+    int unique_count=1;
+    for(int i=1;i<n;i++){
+        if (a[i]!=a[i-1])
+            unique_count++;
+    }
+    printf("%d\n", unique_count);
+    free(a);
 }
 int main(){
     int t;
