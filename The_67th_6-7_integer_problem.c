@@ -9,7 +9,14 @@ int compare(const void *a,const void *b) {
         return 1;
     return 0;
 }
+void solve(){
+    long long arr[7];
+    for (int i=0;i<7;i++) {
+        if(scanf("%lld",&arr[i])!=1)
+            return;
+    }
 
+}
 int main(){
     int t;
     if(scanf("%d",&t)==1){
