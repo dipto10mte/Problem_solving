@@ -15,7 +15,11 @@ void solve(){
         if(scanf("%lld",&arr[i])!=1)
             return;
     }
-
+    qsort(arr,7,sizeof(long long),compare);
+    long long ans=arr[6];
+    for (int i=0;i<6;i++)
+        ans-=arr[i];
+    printf("%lld\n",ans);
 }
 int main(){
     int t;
