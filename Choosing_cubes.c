@@ -14,7 +14,20 @@ void solve(){
     qsort(a,n,sizeof(int),compare_desc);
     int first_pos=-1;
     int last_pos=-1;
-
+    for(int i=0;i<n;i++){
+        if(a[i]==fav_value){
+            if(first_pos==-1)
+                first_pos=i;
+            last_pos=i;
+        }
+    }
+    if(last_pos<k)
+        printf("YES\n");
+    else if(first_pos>=k)
+        printf("NO\n");
+    else
+        printf("MAYBE\n");
+    free(a);
 }
 int main(){
     int t;
