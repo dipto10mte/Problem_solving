@@ -19,7 +19,11 @@ void solve(){
         printf("YES\n");
         return;
     }
-
+    int needSec=last_i-first_i+1;
+    if(x>=needSec)
+        printf("YES\n");
+    else
+        printf("NO\n");
 }
 int main(){
     int t;
