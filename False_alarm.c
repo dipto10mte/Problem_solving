@@ -6,6 +6,19 @@ void solve(){
         return;
     int first_i=-1;
     int last_i=-1;
+    for (int i=1;i<=n;i++) {
+        int door;
+        scanf("%d",&door);
+        if(door==1){
+            if (first_i == -1)
+                first_i = i;
+            last_i = i;
+        }
+    }
+    if (first_i==-1){
+        printf("YES\n");
+        return;
+    }
 
 }
 int main(){
