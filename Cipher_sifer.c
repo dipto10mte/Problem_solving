@@ -5,7 +5,12 @@ void solve(){
     scanf("%d",&n);
     char s[105];
     scanf("%s",s);
+    for (int i=0;i<n;i++) {
+        char current_char=s[i];
+        printf("%c",current_char);
+        i++;
 
+    }
     printf("\n");
 }
 int main(){
