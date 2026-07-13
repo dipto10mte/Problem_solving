@@ -9,7 +9,8 @@ void solve(){
         char current_char=s[i];
         printf("%c",current_char);
         i++;
-
+        while(i<n&&s[i]!=current_char)
+            i++;
     }
     printf("\n");
 }
