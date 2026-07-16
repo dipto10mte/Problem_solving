@@ -13,7 +13,16 @@ void solve(){
     }
     int ans=0;
     int i=0;
-
+    while (i+k<=n){
+        int rainy_days=pref[i+k]-pref[i];
+        if(rainy_days==0){
+            ans++;
+            i+=k+1;
+        }
+        else
+            i++;
+    }
+    printf("%d\n",ans);
 }
 int main(){
     setvbuf(stdout,NULL,_IOFBF,16384);
