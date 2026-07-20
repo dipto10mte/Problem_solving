@@ -9,7 +9,18 @@ void solve(){
     for(int i=0;i<n;i++)
         scanf("%d",&a[i]);
     qsort(a,n,sizeof(int),compare);
-
+    if(a[0]==a[n-1])
+        printf("NO\n");
+    else{
+        printf("YES\n");
+        if(a[0]==a[1]) {
+            int temp=a[1];
+            a[1]=a[n-1];
+            a[n-1]=temp;
+        }
+        for(int i=0;i<n;i++)
+            printf("%d%c",a[i],(i==n-1)?'\n':' ');
+    }
 }
 int main(){
     int t;
