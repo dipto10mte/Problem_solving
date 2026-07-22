@@ -1,5 +1,7 @@
 #include<stdio.h>
+void solve(){
 
+}
 int main(){
     int t;
     if(scanf("%d",&t)!=1)
