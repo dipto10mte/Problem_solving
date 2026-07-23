@@ -18,8 +18,11 @@ void solve(){
     int cand1=a1+a2;
     int cand2=a4-a2;
     int cand3=a5-a4;
-
-
+    int ans1=count_fibonacciness(a1,a2,cand1,a4,a5);
+    int ans2=count_fibonacciness(a1,a2,cand2,a4,a5);
+    int ans3=count_fibonacciness(a1,a2,cand3,a4,a5);
+    int max_ans=max(ans1,max(ans2,ans3));
+    printf("%d\n",max_ans);
 }
 int main(){
     int t;
