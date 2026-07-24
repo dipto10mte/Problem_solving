@@ -3,7 +3,10 @@
 void solve(){
     char s[20];
     scanf("%s",s);
+    int len=strlen(s);
 
+    else
+        printf("NO\n");
 }
 int main(){
     int t;
