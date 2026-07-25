@@ -6,7 +6,8 @@ void solve(){
         printf("0\n");
         return;
     }
-
+    long long pairs=n/2;
+    printf("%lld\n",1+pairs/2);
 }
 int main(){
     int t;
