@@ -2,6 +2,10 @@
 void solve(){
     long long n;
     scanf("%lld",&n);
+    if(n%2!=0){
+        printf("0\n");
+        return;
+    }
 
 }
 int main(){
