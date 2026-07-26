@@ -9,7 +9,11 @@ void solve(){
     int a[100];
     for(int i=0;i<n;i++)
         scanf("%d",&a[i]);
-
+    qsort(a,n,sizeof(int),compare);
+    if(a[n-1]<=d||(a[0]+a[1]<=d))
+        printf("YES\n");
+    else
+        printf("NO\n");
 }
 int main(){
     int t;
