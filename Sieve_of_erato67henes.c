@@ -1,5 +1,9 @@
 #include<stdio.h>
+void solve(void){
+    int n;
+    scanf("%d",&n);
 
+}
 int main(){
     int t;
     if(scanf("%d",&t)==1){
