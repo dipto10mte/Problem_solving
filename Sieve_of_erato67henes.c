@@ -2,7 +2,12 @@
 void solve(void){
     int n;
     scanf("%d",&n);
+    int found=0;
 
+    if(found)
+        printf("YES\n");
+    else
+        printf("NO\n");
 }
 int main(){
     int t;
