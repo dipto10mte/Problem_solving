@@ -3,7 +3,12 @@ void solve(void){
     int n;
     scanf("%d",&n);
     int found=0;
-
+    for(int i=0;i<n;i++){
+        int x;
+        scanf("%d",&x);
+        if(x==67)
+            found = 1;
+    }
     if(found)
         printf("YES\n");
     else
