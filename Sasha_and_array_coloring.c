@@ -10,7 +10,11 @@ void solve(){
     int a[n];
     for(int i=0;i<n;i++)
         scanf("%d",&a[i]);
-
+    qsort(a,n,sizeof(int),compare);
+    int total_cost=0;
+    for(int i=0;i<n/2;i++)
+        total_cost += (a[n - 1 - i] - a[i]);
+    printf("%d\n",total_cost);
 }
 int main(){
     int t;
