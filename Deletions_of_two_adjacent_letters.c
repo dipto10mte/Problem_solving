@@ -5,7 +5,14 @@ void solve(){
     char s[105];
     char c;
     scanf("%s",s);
+    scanf(" %c",&c);
+    int len=strlen(s);
+    bool possible=false;
 
+    if(possible)
+        printf("YES\n");
+    else
+        printf("NO\n");
 }
 int main(){
     int t;
