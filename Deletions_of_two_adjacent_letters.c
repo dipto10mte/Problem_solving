@@ -8,7 +8,12 @@ void solve(){
     scanf(" %c",&c);
     int len=strlen(s);
     bool possible=false;
-
+    for(int i=0;i<len;i++){
+        if(s[i]==c&&i%2==0){
+            possible=true;
+            break;
+        }
+    }
     if(possible)
         printf("YES\n");
     else
