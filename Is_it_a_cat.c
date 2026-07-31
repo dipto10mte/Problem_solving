@@ -6,7 +6,14 @@ void solve(){
     scanf("%d",&n);
     char s[55];
     scanf("%s",s);
+    char compressed[55];
+    int len=0;
 
+
+    if(strcmp(compressed,"meow")==0)
+        printf("YES\n");
+    else
+        printf("NO\n");
 }
 int main(){
     int t;
