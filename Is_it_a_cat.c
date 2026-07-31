@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<ctype.h>
 #include<string.h>
+
 void solve(){
     int n;
     scanf("%d",&n);
@@ -19,6 +20,7 @@ void solve(){
     else
         printf("NO\n");
 }
+
 int main(){
     int t;
     if(scanf("%d",&t)==1){
