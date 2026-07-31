@@ -13,7 +13,16 @@ void solve(){
             last=i;
         }
     }
-
+    if(first==-1){
+        printf("0\n");
+        return;
+    }
+    int zeroes_to_erase=0;
+    for(int i=first;i<=last;i++){
+        if(s[i]=='0')
+            zeroes_to_erase++;
+    }
+    printf("%d\n",zeroes_to_erase);
 }
 int main(){
     int t;
