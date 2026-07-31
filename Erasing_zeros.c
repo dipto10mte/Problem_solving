@@ -6,6 +6,13 @@ void solve(){
         return;
     int len=strlen(s);
     int first=-1,last=-1;
+    for(int i=0;i<len;i++){
+        if(s[i]=='1'){
+            if(first==-1)
+                first=i;
+            last=i;
+        }
+    }
 
 }
 int main(){
