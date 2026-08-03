@@ -29,6 +29,33 @@ static inline long long readLL(void) {
     return neg ? -x : x;
 }
 
+static char obuf[BUF_SZ];
+static int opos = 0;
+
+static inline void flushOut(void) {
+    fwrite(obuf, 1, opos, stdout);
+    opos = 0;
+}
+
+static inline void writeLL(long long x, char sep) {
+    if (opos > BUF_SZ - 32) flushOut();
+    if (x == 0) {
+        obuf[opos++] = '0';
+    } else {
+        char tmp[24];
+        int tl = 0;
+        unsigned long long ux = (unsigned long long)x;
+        if (x < 0) { obuf[opos++] = '-'; ux = (unsigned long long)(-x); }
+        while (ux > 0) { tmp[tl++] = (char)('0' + ux % 10); ux /= 10; }
+        while (tl > 0) obuf[opos++] = tmp[--tl];
+    }
+    obuf[opos++] = sep;
+}
+
+#define MAXN 200005
+static long long a[MAXN];
+static long long tmp[MAXN];
+
 
 
 int main() {
