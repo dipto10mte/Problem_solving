@@ -56,7 +56,23 @@ static inline void writeLL(long long x, char sep) {
 static long long a[MAXN];
 static long long tmp[MAXN];
 
-
+static void mergeSort(long long *arr, int n) {
+    for (int width = 1; width < n; width *= 2) {
+        for (int i = 0; i < n; i += 2 * width) {
+            int left = i;
+            int mid = i + width < n ? i + width : n;
+            int right = i + 2 * width < n ? i + 2 * width : n;
+            int p = left, q = mid, k = left;
+            while (p < mid && q < right) {
+                if (arr[p] <= arr[q]) tmp[k++] = arr[p++];
+                else tmp[k++] = arr[q++];
+            }
+            while (p < mid) tmp[k++] = arr[p++];
+            while (q < right) tmp[k++] = arr[q++];
+        }
+        memcpy(arr, tmp, sizeof(long long) * n);
+    }
+}
 
 int main() {
     long long t = readLL();
