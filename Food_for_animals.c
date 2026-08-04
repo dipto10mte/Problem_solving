@@ -5,7 +5,10 @@ void solve(){
         return;
     long long req_dog=(x>a)?(x-a):0;
     long long req_cat=(y>b)?(y-b):0;
-
+    if(c>=req_dog+req_cat)
+        printf("YES\n");
+    else
+        printf("NO\n");
 }
 int main(){
     int t;
