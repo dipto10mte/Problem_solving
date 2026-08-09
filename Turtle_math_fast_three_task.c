@@ -5,6 +5,13 @@ void solve(void) {
         return;
     int sum=0;
     int has_mod1=0;
+    for(int i=0;i<n;i++){
+        int val;
+        scanf("%d",&val);
+        sum+=val;
+        if(val%3==1)
+            has_mod1=1;
+    }
 
 }
 int main(){
