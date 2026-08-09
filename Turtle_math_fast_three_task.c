@@ -12,7 +12,17 @@ void solve(void) {
         if(val%3==1)
             has_mod1=1;
     }
-
+    int rem=sum%3;
+    if(rem==0)
+        printf("0\n");
+    else if(rem==2)
+        printf("1\n");
+    else{
+        if(has_mod1)
+            printf("1\n");
+        else
+            printf("2\n");
+    }
 }
 int main(){
     int t;
