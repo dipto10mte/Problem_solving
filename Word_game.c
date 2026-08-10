@@ -37,7 +37,20 @@ void solve() {
         count[h]++;
     }
 
+    int score1 = 0, score2 = 0, score3 = 0;
 
+    for (int i = 0; i < n; i++) {
+        if (count[p1[i]] == 1) score1 += 3;
+        else if (count[p1[i]] == 2) score1 += 1;
+
+        if (count[p2[i]] == 1) score2 += 3;
+        else if (count[p2[i]] == 2) score2 += 1;
+
+        if (count[p3[i]] == 1) score3 += 3;
+        else if (count[p3[i]] == 2) score3 += 1;
+    }
+
+    printf("%d %d %d\n", score1, score2, score3);
 }
 
 int main() {
