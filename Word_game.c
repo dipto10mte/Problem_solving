@@ -16,6 +16,27 @@ void solve() {
     int p1[MAX_N], p2[MAX_N], p3[MAX_N];
     char word[4];
 
+    for (int i = 0; i < n; i++) {
+        scanf("%s", word);
+        int h = hash_word(word);
+        p1[i] = h;
+        count[h]++;
+    }
+
+    for (int i = 0; i < n; i++) {
+        scanf("%s", word);
+        int h = hash_word(word);
+        p2[i] = h;
+        count[h]++;
+    }
+
+    for (int i = 0; i < n; i++) {
+        scanf("%s", word);
+        int h = hash_word(word);
+        p3[i] = h;
+        count[h]++;
+    }
+
 
 }
 
