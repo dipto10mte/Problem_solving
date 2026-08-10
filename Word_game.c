@@ -1,7 +1,23 @@
 #include <stdio.h>
 #include <string.h>
 
+#define ALPHABET_CUBE 17576
+#define MAX_N 1000
 
+int hash_word(const char *s) {
+    return (s[0] - 'a') * 676 + (s[1] - 'a') * 26 + (s[2] - 'a');
+}
+
+void solve() {
+    int n;
+    scanf("%d", &n);
+
+    int count[ALPHABET_CUBE] = {0};
+    int p1[MAX_N], p2[MAX_N], p3[MAX_N];
+    char word[4];
+
+
+}
 
 int main() {
     int t;
