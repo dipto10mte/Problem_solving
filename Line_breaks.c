@@ -3,7 +3,11 @@
 void solve(){
     int n,m;
     scanf("%d %d",&n,&m);
+    int count=0;
+    int current_len=0;
+    int stop=0;
 
+    printf("%d\n",count);
 }
 int main(){
     int t;
