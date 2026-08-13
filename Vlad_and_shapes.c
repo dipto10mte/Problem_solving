@@ -11,7 +11,13 @@ int main(){
         int x=0;
         for(int j=0;j<n;j++)if(g[j]=='1')
             x++;
-
+        if(x>0)
+            c[k++]=x;
+        }
+        if(k>1&&c[0]!=c[1])
+            printf("TRIANGLE\n");
+        else
+            printf("SQUARE\n");
     }
 return 0;
 }
