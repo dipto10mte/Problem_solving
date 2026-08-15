@@ -8,7 +8,15 @@ int gcd(int a,int b){
     }
     return a;
 }
+void solve(){
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    bool possible=false;
 
+}
 int main(){
     int t;
     if(scanf("%d",&t)!=1)
