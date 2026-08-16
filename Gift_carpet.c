@@ -8,7 +8,20 @@ void solve(){
         scanf("%s", carpet[i]);
     const char target[]="vika";
     int target_idx=0;
-
+    for(int col=0;col<m;col++) {
+        for(int row=0;row<n;row++){
+            if(carpet[row][col]==target[target_idx]){
+                target_idx++;
+                break;
+            }
+        }
+        if(target_idx==4)
+            break;
+    }
+    if(target_idx==4)
+        printf("YES\n");
+    else
+        printf("NO\n");
 }
 int main(){
     int t;
