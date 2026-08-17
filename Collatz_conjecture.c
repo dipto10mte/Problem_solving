@@ -1,5 +1,9 @@
 #include<stdio.h>
+void solve(){
+    long long k,x;
+    scanf("%lld %lld",&k,&x);
 
+}
 int main(){
     int t;
     if(scanf("%d",&t)!=1)
