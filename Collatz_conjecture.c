@@ -2,7 +2,8 @@
 void solve(){
     long long k,x;
     scanf("%lld %lld",&k,&x);
-
+    long long initial_val=x<<k;
+    printf("%lld\n",initial_val);
 }
 int main(){
     int t;
