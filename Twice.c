@@ -10,7 +10,10 @@ void solve(){
         scanf("%d",&x);
         count[x]++;
     }
-
+    int total_score=0;
+    for(int i=1;i<= n; i++)
+        total_score+=count[i]/2;
+    printf("%d\n",total_score);
 }
 int main(){
     int t;
