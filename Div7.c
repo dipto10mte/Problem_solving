@@ -7,7 +7,12 @@ void solve(){
         return;
     }
     int base=n-(n%10);
-
+    for(int d=0;d<=9;d++){
+        if((base+d)%7==0){
+            printf("%d\n",base + d);
+            return;
+        }
+    }
 }
 int main(){
     int t;
