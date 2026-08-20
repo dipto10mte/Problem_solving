@@ -2,6 +2,11 @@
 void solve(){
     int n;
     scanf("%d",&n);
+    if(n%7==0){
+        printf("%d\n",n);
+        return;
+    }
+    int base=n-(n%10);
 
 }
 int main(){
