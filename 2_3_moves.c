@@ -6,7 +6,8 @@ void solve(){
         printf("2\n");
     else if(n%3==0)
         printf("%lld\n",n/3);
-
+    else
+        printf("%lld\n",(n/3)+1);
 }
 int main(){
     int t;
