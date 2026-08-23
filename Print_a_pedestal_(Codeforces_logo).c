@@ -13,7 +13,13 @@ void solve(){
         y=n/3;
         z=n/3-1;
     }
-
+    else{
+        x=n/3+2;
+        y=n/3+1;
+        z=n/3-1;
+    }
+    printf("%d %d %d\n",y,x,z);
+}
 int main(){
     int t;
     if(scanf("%d",&t)==1){
