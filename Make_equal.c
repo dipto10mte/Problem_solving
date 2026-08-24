@@ -5,6 +5,13 @@ void solve(){
     scanf("%d",&n);
     long long a[n];
     long long total_sum=0;
+    for(int i=0;i<n;i++){
+        scanf("%lld",&a[i]);
+        total_sum+=a[i];
+    }
+    long long target=total_sum/n;
+    long long excess=0;
+    bool possible=true;
 
 }
 int main(){
