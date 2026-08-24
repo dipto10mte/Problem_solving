@@ -12,7 +12,17 @@ void solve(){
     long long target=total_sum/n;
     long long excess=0;
     bool possible=true;
-
+    for(int i=0;i<n;i++){
+        excess+=(a[i]-target);
+        if(excess<0){
+            possible=false;
+            break;
+        }
+    }
+    if(possible)
+        printf("YES\n");
+    else
+    printf("NO\n");
 }
 int main(){
     int t;
