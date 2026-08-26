@@ -4,6 +4,10 @@ void solve(){
     int n;
     scanf("%d",&n);
     char s[505];
+    scanf("%s",s);
+    int count[26]={0};
+    for(int i=0;i<n;i++)
+        count[s[i]-'A']++;
 
 }
 int main(){
