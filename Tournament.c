@@ -5,7 +5,14 @@ void solve(){
         return;
     int target_val=0;
     int max_val=0;
-
+    for (int i=1;i<=n;i++){
+        int a;
+        scanf("%d",&a);
+        if(i==j)
+            target_val=a;
+        if(a>max_val)
+            max_val=a;
+    }
     if(k>1||target_val==max_val)
         printf("YES\n");
     else
