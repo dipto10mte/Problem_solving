@@ -4,7 +4,9 @@ void solve(){
     if(scanf("%d",&n)!=1)
         return;
     long long min_val=2e9;
+    long long max_val=-1;
 
+    printf("%lld\n",max_val-min_val);
 }
 int main(){
     int t;
