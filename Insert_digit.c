@@ -10,7 +10,13 @@ int main(){
         char s[200005];
         scanf("%s",s);
         int inserted=0;
-
+        for(int i=0;i<n;i++){
+            if(!inserted&&d>s[i]){
+                putchar(d);
+                inserted=1;
+            }
+            putchar(s[i]);
+        }
         if(!inserted)
             putchar(d);
         putchar('\n');
