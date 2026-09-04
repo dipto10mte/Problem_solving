@@ -7,7 +7,13 @@ int main(){
         int n;
         char d;
         scanf("%d %c",&n,&d);
+        char s[200005];
+        scanf("%s",s);
+        int inserted=0;
 
+        if(!inserted)
+            putchar(d);
+        putchar('\n');
     }
     return 0;
 }
