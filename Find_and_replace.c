@@ -8,7 +8,18 @@ void solve(){
     char s[2005];
     scanf("%s",s);
     int parity[26];
-
+    memset(parity,-1,sizeof(parity));
+    bool possible=true;
+    for(int i=0;i<n;i++){
+        int char_idx=s[i]-'a';
+        int current_parity=i%2;
+        if(parity[char_idx]==-1)
+            parity[char_idx]=current_parity;
+        else if(parity[char_idx]!=current_parity){
+            possible=false;
+            break;
+        }
+    }
     if(possible)
         printf("YES\n");
     else
