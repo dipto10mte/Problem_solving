@@ -1,6 +1,8 @@
 #include<stdio.h>
 void solve(){
-
+    long long n;
+    scanf("%lld",&n);
+    printf("%lld\n",(n+1)/10);
 }
 int main(){
     int t;
