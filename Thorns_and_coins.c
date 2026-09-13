@@ -1,5 +1,13 @@
 #include<stdio.h>
+void solve(){
+    int n;
+    if(scanf("%d",&n)!=1)
+        return;
+    char s[55];
+    scanf("%s",s);
 
+    printf("%d\n",coins);
+}
 int main(){
     int t;
     if(scanf("%d",&t)==1){
