@@ -3,7 +3,8 @@ void solve(){
     int n;
     if(scanf("%d",&n)!=1)
         return;
-
+    for(int i=1;i<=n;i++)
+        printf("%d%c",2*i-1,i==n?'\n':' ');
 }
 int main(){
     int t;
